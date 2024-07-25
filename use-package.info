@@ -1,4 +1,4 @@
-This is docwPo5ID.info, produced by makeinfo version 6.8 from
+This is docSwYVNS.info, produced by makeinfo version 6.8 from
 use-package.texi.
 
 This manual is for use-package 2.4.5 from GNU ELPA.
@@ -21,7 +21,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docwPo5ID.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
+File: docSwYVNS.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
 
 use-package User Manual
 ***********************
@@ -74,7 +74,7 @@ Index
 * Index::
 
 
-File: docwPo5ID.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
+File: docSwYVNS.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Basic Concepts
 ****************
@@ -109,7 +109,7 @@ Customization::).  On the contrary, it is designed to work together with
 it, for things that Customize cannot do.
 
 
-File: docwPo5ID.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
+File: docSwYVNS.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
 
 2 Getting Started
 *****************
@@ -151,9 +151,9 @@ together:
    The above declarations will load the ‘foo’ package immediately.  In
 most cases, this is not necessary or desirable, as that will slow down
 Emacs startup.  Instead, you should try to set things up so that
-packages are only loaded when they are actually needed (a.k.a.
+packages are only loaded when they are actually needed (this is known as
 “autoloading”).  If you have installed a package from GNU ELPA that
-provides it’s own autoloads, it is often enough to say:
+provides its own autoloads, it is often enough to say:
 
      (use-package foo
        :defer t)
@@ -188,7 +188,7 @@ that as a starting point.
    That should be enough to get you started!
 
 
-File: docwPo5ID.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
+File: docSwYVNS.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
 
 3 Loading Packages
 ******************
@@ -214,11 +214,12 @@ Emacs start.  *Note Installing packages::, for details.
 * Forcing loading::             Loading packages immediately.
 * Conditional loading::         Loading packages conditionally.
 * Loading sequentially::        Loading packages in sequence.
+* The emacs package::    Customizing built-in variables.
 * Load dependencies::           Don’t load without dependencies.
 * Manual installation::         Loading manually installed packages.
 
 
-File: docwPo5ID.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
 
 3.1 How and when use-package loads packages
 ===========================================
@@ -257,7 +258,7 @@ documentation for details.
 Byte-compiling::.
 
 
-File: docwPo5ID.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
 
 3.2 Deferring package loading
 =============================
@@ -331,7 +332,7 @@ always specified.  This can be overridden for individual declarations
 using either ‘:defer nil’ or ‘:demand t’ (*note Forcing loading::).
 
 
-File: docwPo5ID.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
 
 3.3 Forcing package to load immediately
 =======================================
@@ -347,7 +348,7 @@ be redundant.
 will take precedence.
 
 
-File: docwPo5ID.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
 
 3.4 Loading packages conditionally
 ==================================
@@ -415,7 +416,7 @@ itself.  For example:
          :ensure t))
 
 
-File: docwPo5ID.info,  Node: Loading sequentially,  Next: Load dependencies,  Prev: Conditional loading,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
 
 3.5 Loading packages in sequence
 ================================
@@ -475,9 +476,39 @@ possible that your package will never be loaded if you do not add
 ‘:demand t’ to those declarations.
 
 
-File: docwPo5ID.info,  Node: Load dependencies,  Next: Manual installation,  Prev: Loading sequentially,  Up: Loading Packages
+File: docSwYVNS.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
 
-3.6 Prevent loading if dependencies are missing
+3.6 Customizing built-in variables
+==================================
+
+Some users want to put all their customizations in use-package
+declarations, even for variables, hooks, and options that are always
+available, without loading any package.(1)
+
+   For that purpose, you can use the no-op ‘emacs’ package:
+
+     (use-package emacs
+       :init
+       (setq custom-file "~/.emacs.d/emacs-custom.el")
+       (load custom-file)
+       (setq frame-title-format "%b")
+       :custom
+       (use-short-answers t))
+
+   This declaration takes advantage of the fact that ‘(featurep 'emacs)’
+always returns true, and has no special meaning beyond that.  It simply
+provides a way to organize your customizations, without loading
+anything.
+
+   ---------- Footnotes ----------
+
+   (1) In other words, they are either preloaded in Emacs or defined in
+Emacs’ C sources.
+
+
+File: docSwYVNS.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
+
+3.7 Prevent loading if dependencies are missing
 ===============================================
 
 While the ‘:after’ keyword delays loading until the dependencies are
@@ -504,9 +535,9 @@ This is the same as:
 use ‘:if’ and the appropriate Lisp expression.
 
 
-File: docwPo5ID.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
+File: docSwYVNS.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
 
-3.7 Manually installed package
+3.8 Manually installed package
 ==============================
 
 When installing packages manually, without Emacs’ built-in package
@@ -520,9 +551,9 @@ use-package makes this more convenient.
 * Manual autoloads::            Setting up autoloads manually.
 
 
-File: docwPo5ID.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
+File: docSwYVNS.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
 
-3.7.1 Setting a custom ‘load-path’
+3.8.1 Setting a custom ‘load-path’
 ----------------------------------
 
 When installing packages manually, you must make sure its libraries are
@@ -558,9 +589,9 @@ For example:
        :commands R)
 
 
-File: docwPo5ID.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
+File: docSwYVNS.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
 
-3.7.2 Setting up autoloads manually
+3.8.2 Setting up autoloads manually
 -----------------------------------
 
 Packages often document how to set up its autoloads when it is being
@@ -579,7 +610,7 @@ is used to autoload non-interactive functions.  Here is an example:
        :autoload org-crypt-use-before-save-magic)
 
 
-File: docwPo5ID.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
+File: docSwYVNS.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
 
 4 Configuring Packages
 **********************
@@ -599,7 +630,7 @@ that help you configure packages.
 * Hiding minor modes::          Tidying up the mode line.
 
 
-File: docwPo5ID.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
 
 4.1 Using Lisp code for configuring packages
 ============================================
@@ -620,7 +651,7 @@ evaluated.
 * Best practices::              When to use ‘:config’, ‘:init’, and ‘:preface’.
 
 
-File: docwPo5ID.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
+File: docSwYVNS.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
 
 4.1.1 ‘:preface’ is evaluated first
 -----------------------------------
@@ -641,7 +672,7 @@ Therefore, you should avoid having any side-effects in your ‘:preface’
 forms, and restrict them to symbol declarations and definitions.
 
 
-File: docwPo5ID.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
+File: docSwYVNS.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
 
 4.1.2 ‘:init’ is evaluated before loading package
 -------------------------------------------------
@@ -654,7 +685,7 @@ the ‘:config’ section.  ‘:init’ also always happens before package load,
 whether ‘:config’ has been deferred or not.
 
 
-File: docwPo5ID.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
+File: docSwYVNS.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
 
 4.1.3 ‘:config’ is evaluated after loading package
 --------------------------------------------------
@@ -670,7 +701,7 @@ section.  That way, deferred loading can help your Emacs start as
 quickly as possible.
 
 
-File: docwPo5ID.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
+File: docSwYVNS.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
 
 4.1.4 When to use ‘:preface’, ‘:config’ and ‘:init’?
 ----------------------------------------------------
@@ -711,7 +742,7 @@ is therefore to use ‘:hook’ (*note Hooks::), which also implies
 startup time will not suffer one bit.
 
 
-File: docwPo5ID.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
 
 4.2 Key bindings
 ================
@@ -731,7 +762,7 @@ various autoloads.  With use-package, you can simplify this using the
 * Displaying keybindings::      Displaying personal key bindings.
 
 
-File: docwPo5ID.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
+File: docSwYVNS.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
 
 4.2.1 Global keybindings
 ------------------------
@@ -826,7 +857,7 @@ above like so:
 usually the best, as it will save some typing.
 
 
-File: docwPo5ID.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
+File: docSwYVNS.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
 
 4.2.2 Key bindings in local keymaps
 -----------------------------------
@@ -858,7 +889,7 @@ before the first use of ‘:map’ are applied to the global keymap:
               ("M-n" . term-send-down)))
 
 
-File: docwPo5ID.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
+File: docSwYVNS.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
 
 4.2.3 Binding to keymaps
 ------------------------
@@ -882,7 +913,7 @@ reinterpret that keypress as a prefix key.
        :bind-keymap ("C-c p" . foo-command-map))
 
 
-File: docwPo5ID.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
+File: docSwYVNS.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
 
 4.2.4 Binding to repeat-maps
 ----------------------------
@@ -944,7 +975,7 @@ to:
         ("r" . git-gutter+-revert-hunk)))
 
 
-File: docwPo5ID.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
+File: docSwYVNS.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
 
 4.2.5 Displaying personal keybindings
 -------------------------------------
@@ -958,7 +989,7 @@ keybindings.
 set using either the ‘:bind’ keyword or the ‘bind-keys’ macro.
 
 
-File: docwPo5ID.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
 
 4.3 Hooks
 =========
@@ -1033,7 +1064,7 @@ for that module, if not already defined as functions), and so ‘:defer t’
 is also implied by ‘:hook’.
 
 
-File: docwPo5ID.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
 
 4.4 Modes and interpreters
 ==========================
@@ -1073,7 +1104,7 @@ regexps:
        :interpreter ("fooa" "foob"))
 
 
-File: docwPo5ID.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
 
 4.5 Magic handlers
 ==================
@@ -1098,7 +1129,7 @@ loading of ‘pdf-tools’, and runs ‘pdf-view-mode’ if the beginning of a
 buffer matches the string ‘"%PDF"’.
 
 
-File: docwPo5ID.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
 
 4.6 User options
 ================
@@ -1130,7 +1161,7 @@ use-package declaration and your ‘custom-file’, which can lead to
 problems that are both tricky and tedious to debug.
 
 
-File: docwPo5ID.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
 
 4.7 Faces
 =========
@@ -1157,7 +1188,7 @@ Example:
        (load-theme 'zenburn t))
 
 
-File: docwPo5ID.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
+File: docSwYVNS.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
 
 4.8 Hiding minor modes with diminish and delight
 ================================================
@@ -1178,7 +1209,7 @@ first install the corresponding package from GNU ELPA.
    (1) When in doubt, you might as well use ‘diminish’.
 
 
-File: docwPo5ID.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
+File: docSwYVNS.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
 
 4.8.1 Diminish
 --------------
@@ -1210,7 +1241,7 @@ the package name with ‘-mode’ appended at the end:
    (1) The ‘diminish’ package is installable from GNU ELPA.
 
 
-File: docwPo5ID.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
+File: docSwYVNS.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
 
 4.8.2 Delight
 -------------
@@ -1267,7 +1298,7 @@ example, to replace ‘foo-mode’ with the value of the current buffer:
    (1) The ‘delight’ package is installable from GNU ELPA.
 
 
-File: docwPo5ID.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
+File: docSwYVNS.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
 
 5 Installing packages automatically
 ***********************************
@@ -1287,7 +1318,7 @@ useful if you use your init file on more than one system.
 * Other package managers::
 
 
-File: docwPo5ID.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
+File: docSwYVNS.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
 
 5.1 Installing package
 ======================
@@ -1352,7 +1383,7 @@ it with ‘:load-path’ (*note Load path::):
    The above dispatches to ‘package-vc-install-from-checkout’.
 
 
-File: docwPo5ID.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
+File: docSwYVNS.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
 
 5.2 Pinning packages using ‘:pin’
 =================================
@@ -1399,7 +1430,7 @@ special ‘manual’ archive).
 24.4.
 
 
-File: docwPo5ID.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
+File: docSwYVNS.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
 
 5.3 Non-standard package managers
 =================================
@@ -1418,7 +1449,7 @@ you are using.  If you run into any bugs, it is often best to report
 them directly to the developers of that package manager.
 
 
-File: docwPo5ID.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
+File: docSwYVNS.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
 
 6 Byte-compiling your init file
 *******************************
@@ -1470,7 +1501,7 @@ want to use ‘use-package’ for is to add a configuration to the
        (message "Evaluate this immediately after loading `foo'"))
 
 
-File: docwPo5ID.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
+File: docSwYVNS.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
 
 7 Troubleshooting
 *****************
@@ -1505,7 +1536,7 @@ use-package.
 * Disabling a package::
 
 
-File: docwPo5ID.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
+File: docSwYVNS.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
 
 7.1 Options that help when troubleshooting
 ==========================================
@@ -1543,7 +1574,7 @@ I'm always here after the package is loaded
 oops
 
 
-File: docwPo5ID.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
+File: docSwYVNS.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
 
 7.2 Gathering Statistics
 ========================
@@ -1574,7 +1605,7 @@ directly in your init file, and not with ‘customize’, you must do this
 after loading ‘use-package’, but before any ‘use-package’ forms.
 
 
-File: docwPo5ID.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
+File: docSwYVNS.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
 
 7.3 Disabling a package
 =======================
@@ -1597,7 +1628,7 @@ declarations from the output entirely, in order to make Emacs startup
 faster.
 
 
-File: docwPo5ID.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
+File: docSwYVNS.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
 
 Appendix A Keyword extensions
 *****************************
@@ -1615,7 +1646,7 @@ optionally enabled.
 * Creating an extension::
 
 
-File: docwPo5ID.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
+File: docSwYVNS.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
 
 A.1 :use-package-ensure-system-package
 ======================================
@@ -1708,7 +1739,7 @@ you could try the ‘exec-path-from-shell’
 which is what ‘system-packages’ uses internally.
 
 
-File: docwPo5ID.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
+File: docSwYVNS.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
 
 A.2 How to create an extension keyword
 ======================================
@@ -1788,7 +1819,7 @@ This section describes how to create a new keyword.
      immediately after the ‘(use-package ...)’ expression.
 
 
-File: docwPo5ID.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
+File: docSwYVNS.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
 
 Appendix B History and acknowledgments
 **************************************
@@ -1805,7 +1836,7 @@ but we thank them all for their contributions.
 rewrite of the old use-package manual and ‘README’.
 
 
-File: docwPo5ID.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
+File: docSwYVNS.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
 
 Appendix C GNU Free Documentation License
 *****************************************
@@ -2287,7 +2318,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docwPo5ID.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
+File: docSwYVNS.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2365,6 +2396,7 @@ Index
 * customization of faces:                Faces.                (line  6)
 * customization of variables:            User options.         (line  6)
 * customize package configuration:       Configuring Packages. (line  6)
+* customizing built-in variables:        The emacs package.    (line  6)
 * debugging use-package:                 Troubleshooting.      (line  6)
 * defer loading by default:              Deferring loading.    (line 69)
 * deferring loading of package:          Deferring loading.    (line  6)
@@ -2459,58 +2491,60 @@ Tag Table:
 Node: Top918
 Node: Basic Concepts3154
 Node: Getting Started4671
-Node: Loading Packages7712
-Node: Loading basics9026
-Ref: Loading basics-Footnote-110665
-Node: Deferring loading10749
-Node: Forcing loading14002
-Node: Conditional loading14685
-Node: Loading sequentially16942
-Node: Load dependencies19630
-Node: Manual installation20616
-Node: Load path21174
-Node: Manual autoloads22649
-Node: Configuring Packages23473
-Node: Lisp Configuration24229
-Node: Preface keyword25091
-Node: Init keyword25981
-Node: Config keyword26628
-Node: Best practices27351
-Node: Key bindings28908
-Node: Global keybindings29705
-Node: Binding in keymaps32868
-Node: Binding to a keymap34073
-Node: Binding to repeat-maps35109
-Node: Displaying keybindings37505
-Node: Hooks38067
-Node: Modes and interpreters40831
-Node: Magic handlers42400
-Node: User options43366
-Node: Faces44842
-Node: Hiding minor modes45643
-Ref: Hiding minor modes-Footnote-146364
-Node: Diminish46425
-Ref: Diminish-Footnote-147384
-Node: Delight47449
-Ref: Delight-Footnote-149313
-Node: Installing packages49377
-Node: Install package50136
-Node: Pinning packages52496
-Ref: Pinning packages-Footnote-154194
-Node: Other package managers54274
-Node: Byte-compiling55140
-Node: Troubleshooting57158
-Node: Troubleshooting Options58507
-Node: Gathering Statistics60061
-Node: Disabling a package61625
-Node: Keyword extensions62336
-Node: use-package-ensure-system-package62822
-Ref: use-package-ensure-system-package-Footnote-165815
-Ref: use-package-ensure-system-package-Footnote-266140
-Node: Creating an extension66271
-Node: History69702
-Node: GNU Free Documentation License70373
-Node: Index95723
+Node: Loading Packages7719
+Node: Loading basics9090
+Ref: Loading basics-Footnote-110729
+Node: Deferring loading10813
+Node: Forcing loading14066
+Node: Conditional loading14749
+Node: Loading sequentially17006
+Node: The emacs package19694
+Ref: The emacs package-Footnote-120596
+Node: Load dependencies20689
+Node: Manual installation21672
+Node: Load path22230
+Node: Manual autoloads23705
+Node: Configuring Packages24529
+Node: Lisp Configuration25285
+Node: Preface keyword26147
+Node: Init keyword27037
+Node: Config keyword27684
+Node: Best practices28407
+Node: Key bindings29964
+Node: Global keybindings30761
+Node: Binding in keymaps33924
+Node: Binding to a keymap35129
+Node: Binding to repeat-maps36165
+Node: Displaying keybindings38561
+Node: Hooks39123
+Node: Modes and interpreters41887
+Node: Magic handlers43456
+Node: User options44422
+Node: Faces45898
+Node: Hiding minor modes46699
+Ref: Hiding minor modes-Footnote-147420
+Node: Diminish47481
+Ref: Diminish-Footnote-148440
+Node: Delight48505
+Ref: Delight-Footnote-150369
+Node: Installing packages50433
+Node: Install package51192
+Node: Pinning packages53552
+Ref: Pinning packages-Footnote-155250
+Node: Other package managers55330
+Node: Byte-compiling56196
+Node: Troubleshooting58214
+Node: Troubleshooting Options59563
+Node: Gathering Statistics61117
+Node: Disabling a package62681
+Node: Keyword extensions63392
+Node: use-package-ensure-system-package63878
+Ref: use-package-ensure-system-package-Footnote-166871
+Ref: use-package-ensure-system-package-Footnote-267196
+Node: Creating an extension67327
+Node: History70758
+Node: GNU Free Documentation License71429
+Node: Index96779
 
 End Tag Table
 
