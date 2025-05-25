@@ -1,4 +1,4 @@
-This is docInpZZ1.info, produced by makeinfo version 6.8 from
+This is docwMThyO.info, produced by makeinfo version 6.8 from
 use-package.texi.
 
 This manual is for use-package 2.4.5 from GNU ELPA.
@@ -21,7 +21,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docInpZZ1.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
+File: docwMThyO.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
 
 use-package User Manual
 ***********************
@@ -72,7 +72,7 @@ Index
 * Index::
 
 
-File: docInpZZ1.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
+File: docwMThyO.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Basic Concepts
 ****************
@@ -107,7 +107,7 @@ Customization::).  On the contrary, it is designed to work together with
 it, for things that Customize cannot do.
 
 
-File: docInpZZ1.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
+File: docwMThyO.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
 
 2 Getting Started
 *****************
@@ -186,7 +186,7 @@ that as a starting point.
    That should be enough to get you started!
 
 
-File: docInpZZ1.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
+File: docwMThyO.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
 
 3 Loading Packages
 ******************
@@ -217,7 +217,7 @@ Emacs start.  *Note Installing packages::, for details.
 * Manual installation::         Loading manually installed packages.
 
 
-File: docInpZZ1.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
+File: docwMThyO.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
 
 3.1 How and when use-package loads packages
 ===========================================
@@ -256,7 +256,7 @@ documentation for details.
 Byte-compiling::.
 
 
-File: docInpZZ1.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
+File: docwMThyO.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
 
 3.2 Deferring package loading
 =============================
@@ -330,7 +330,7 @@ always specified.  This can be overridden for individual declarations
 using either ‘:defer nil’ or ‘:demand t’ (*note Forcing loading::).
 
 
-File: docInpZZ1.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
+File: docwMThyO.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
 
 3.3 Forcing package to load immediately
 =======================================
@@ -346,7 +346,7 @@ be redundant.
 will take precedence.
 
 
-File: docInpZZ1.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
+File: docwMThyO.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
 
 3.4 Loading packages conditionally
 ==================================
@@ -414,7 +414,7 @@ itself.  For example:
          :ensure t))
 
 
-File: docInpZZ1.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
+File: docwMThyO.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
 
 3.5 Loading packages in sequence
 ================================
@@ -474,7 +474,7 @@ possible that your package will never be loaded if you do not add
 ‘:demand t’ to those declarations.
 
 
-File: docInpZZ1.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
+File: docwMThyO.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
 
 3.6 Customizing built-in variables
 ==================================
@@ -504,7 +504,7 @@ anything.
 Emacs’s C sources.
 
 
-File: docInpZZ1.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
+File: docwMThyO.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
 
 3.7 Prevent loading if dependencies are missing
 ===============================================
@@ -533,7 +533,7 @@ This is the same as:
 use ‘:if’ and the appropriate Lisp expression.
 
 
-File: docInpZZ1.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
+File: docwMThyO.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
 
 3.8 Manually installed package
 ==============================
@@ -549,7 +549,7 @@ use-package makes this more convenient.
 * Manual autoloads::            Setting up autoloads manually.
 
 
-File: docInpZZ1.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
+File: docwMThyO.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
 
 3.8.1 Setting a custom ‘load-path’
 ----------------------------------
@@ -587,7 +587,7 @@ For example:
        :commands R)
 
 
-File: docInpZZ1.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
+File: docwMThyO.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
 
 3.8.2 Setting up autoloads manually
 -----------------------------------
@@ -608,7 +608,7 @@ is used to autoload non-interactive functions.  Here is an example:
        :autoload org-crypt-use-before-save-magic)
 
 
-File: docInpZZ1.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
+File: docwMThyO.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
 
 4 Configuring Packages
 **********************
@@ -628,7 +628,7 @@ that help you configure packages.
 * Hiding minor modes::          Tidying up the mode line.
 
 
-File: docInpZZ1.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
 
 4.1 Using Lisp code for configuring packages
 ============================================
@@ -649,7 +649,7 @@ evaluated.
 * Best practices::              When to use ‘:config’, ‘:init’, and ‘:preface’.
 
 
-File: docInpZZ1.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
+File: docwMThyO.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
 
 4.1.1 ‘:preface’ is evaluated first
 -----------------------------------
@@ -670,7 +670,7 @@ Therefore, you should avoid having any side-effects in your ‘:preface’
 forms, and restrict them to symbol declarations and definitions.
 
 
-File: docInpZZ1.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
+File: docwMThyO.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
 
 4.1.2 ‘:init’ is evaluated before loading package
 -------------------------------------------------
@@ -683,7 +683,7 @@ the ‘:config’ section.  ‘:init’ also always happens before package load,
 whether ‘:config’ has been deferred or not.
 
 
-File: docInpZZ1.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
+File: docwMThyO.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
 
 4.1.3 ‘:config’ is evaluated after loading package
 --------------------------------------------------
@@ -699,7 +699,7 @@ section.  That way, deferred loading can help your Emacs start as
 quickly as possible.
 
 
-File: docInpZZ1.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
+File: docwMThyO.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
 
 4.1.4 When to use ‘:preface’, ‘:config’ and ‘:init’?
 ----------------------------------------------------
@@ -740,7 +740,7 @@ is therefore to use ‘:hook’ (*note Hooks::), which also implies
 startup time will not suffer one bit.
 
 
-File: docInpZZ1.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
 
 4.2 Key bindings
 ================
@@ -760,7 +760,7 @@ various autoloads.  With use-package, you can simplify this using the
 * Displaying keybindings::      Displaying personal key bindings.
 
 
-File: docInpZZ1.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
+File: docwMThyO.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
 
 4.2.1 Global keybindings
 ------------------------
@@ -855,7 +855,7 @@ above like so:
 usually the best, as it will save some typing.
 
 
-File: docInpZZ1.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
+File: docwMThyO.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
 
 4.2.2 Key bindings in local keymaps
 -----------------------------------
@@ -887,7 +887,7 @@ before the first use of ‘:map’ are applied to the global keymap:
               ("M-n" . term-send-down)))
 
 
-File: docInpZZ1.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
+File: docwMThyO.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
 
 4.2.3 Binding to keymaps
 ------------------------
@@ -911,7 +911,7 @@ reinterpret that keypress as a prefix key.
        :bind-keymap ("C-c p" . foo-command-map))
 
 
-File: docInpZZ1.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
+File: docwMThyO.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
 
 4.2.4 Binding to repeat-maps
 ----------------------------
@@ -995,7 +995,7 @@ but not initiate the repeat map themselves.  Example:
         ("y" . yank)))
 
 
-File: docInpZZ1.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
+File: docwMThyO.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
 
 4.2.5 Displaying personal keybindings
 -------------------------------------
@@ -1009,7 +1009,7 @@ keybindings.
 set using either the ‘:bind’ keyword or the ‘bind-keys’ macro.
 
 
-File: docInpZZ1.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
 
 4.3 Hooks
 =========
@@ -1064,6 +1064,13 @@ applied, the following examples are all equivalent:
        (add-hook 'prog-mode-hook #'company-mode)
        (add-hook 'text-mode-hook #'company-mode))
 
+   To add more than one function to the same hook, add them separately,
+like this:
+
+     (use-package company
+       :hook ((prog-mode . company-mode)
+              (prog-mode . some-other-function)))
+
    One common mistake when using ‘:hook’ is to forget to omit the
 ‘-hook’ suffix, which, as already explained, is appended automatically.
 Therefore, the following will not work, as it attempts to add a function
@@ -1084,7 +1091,7 @@ for that module, if not already defined as functions), and so ‘:defer t’
 is also implied by ‘:hook’.
 
 
-File: docInpZZ1.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
 
 4.4 Modes and interpreters
 ==========================
@@ -1124,7 +1131,7 @@ regexps:
        :interpreter ("fooa" "foob"))
 
 
-File: docInpZZ1.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
 
 4.5 Magic handlers
 ==================
@@ -1149,7 +1156,7 @@ loading of ‘pdf-tools’, and runs ‘pdf-view-mode’ if the beginning of a
 buffer matches the string ‘"%PDF"’.
 
 
-File: docInpZZ1.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
+File: docwMThyO.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
 
 4.6 User options
 ================
@@ -1188,7 +1195,7 @@ We therefore recommend against byte-compiling files that use
 ‘use-package’ with ‘:custom’ settings.
 
 
-File: docInpZZ1.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
 
 4.7 Faces
 =========
@@ -1220,7 +1227,7 @@ Customizations::).  Using both systems to configure the same face can
 lead to confusing results.
 
 
-File: docInpZZ1.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
+File: docwMThyO.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
 
 4.8 Hiding minor modes with diminish and delight
 ================================================
@@ -1241,7 +1248,7 @@ first install the corresponding package from GNU ELPA.
    (1) When in doubt, you might as well use ‘diminish’.
 
 
-File: docInpZZ1.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
+File: docwMThyO.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
 
 4.8.1 Diminish
 --------------
@@ -1273,7 +1280,7 @@ the package name with ‘-mode’ appended at the end:
    (1) The ‘diminish’ package is installable from GNU ELPA.
 
 
-File: docInpZZ1.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
+File: docwMThyO.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
 
 4.8.2 Delight
 -------------
@@ -1330,7 +1337,7 @@ example, to replace ‘foo-mode’ with the value of the current buffer:
    (1) The ‘delight’ package is installable from GNU ELPA.
 
 
-File: docInpZZ1.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
+File: docwMThyO.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
 
 5 Installing packages automatically
 ***********************************
@@ -1350,7 +1357,7 @@ useful if you use your init file on more than one system.
 * Other package managers::
 
 
-File: docInpZZ1.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
+File: docwMThyO.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
 
 5.1 Installing package
 ======================
@@ -1416,7 +1423,7 @@ it with ‘:load-path’ (*note Load path::):
    The above dispatches to ‘package-vc-install-from-checkout’.
 
 
-File: docInpZZ1.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
+File: docwMThyO.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
 
 5.2 Pinning packages using ‘:pin’
 =================================
@@ -1463,7 +1470,7 @@ special ‘manual’ archive).
 24.4.
 
 
-File: docInpZZ1.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
+File: docwMThyO.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
 
 5.3 Non-standard package managers
 =================================
@@ -1482,7 +1489,7 @@ you are using.  If you run into any bugs, it is often best to report
 them directly to the developers of that package manager.
 
 
-File: docInpZZ1.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
+File: docwMThyO.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
 
 6 Byte-compiling your init file
 *******************************
@@ -1534,7 +1541,7 @@ want to use ‘use-package’ for is to add a configuration to the
        (message "Evaluate this immediately after loading `foo'"))
 
 
-File: docInpZZ1.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
+File: docwMThyO.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
 
 7 Troubleshooting
 *****************
@@ -1569,7 +1576,7 @@ use-package.
 * Disabling a package::
 
 
-File: docInpZZ1.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
+File: docwMThyO.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
 
 7.1 Options that help when troubleshooting
 ==========================================
@@ -1607,7 +1614,7 @@ I'm always here after the package is loaded
 oops
 
 
-File: docInpZZ1.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
+File: docwMThyO.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
 
 7.2 Gathering Statistics
 ========================
@@ -1638,7 +1645,7 @@ directly in your init file, and not with ‘customize’, you must do this
 after loading ‘use-package’, but before any ‘use-package’ forms.
 
 
-File: docInpZZ1.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
+File: docwMThyO.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
 
 7.3 Disabling a package
 =======================
@@ -1661,7 +1668,7 @@ declarations from the output entirely, in order to make Emacs startup
 faster.
 
 
-File: docInpZZ1.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
+File: docwMThyO.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
 
 Appendix A Keyword extensions
 *****************************
@@ -1679,7 +1686,7 @@ optionally enabled.
 * Creating an extension::
 
 
-File: docInpZZ1.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
+File: docwMThyO.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
 
 A.1 :use-package-ensure-system-package
 ======================================
@@ -1772,7 +1779,7 @@ you could try the ‘exec-path-from-shell’
 which is what ‘system-packages’ uses internally.
 
 
-File: docInpZZ1.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
+File: docwMThyO.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
 
 A.2 How to create an extension keyword
 ======================================
@@ -1852,7 +1859,7 @@ This section describes how to create a new keyword.
      immediately after the ‘(use-package ...)’ expression.
 
 
-File: docInpZZ1.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
+File: docwMThyO.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
 
 Appendix B History and acknowledgments
 **************************************
@@ -1869,7 +1876,7 @@ but we thank them all for their contributions.
 rewrite of the old use-package manual and ‘README’.
 
 
-File: docInpZZ1.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
+File: docwMThyO.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
 
 Appendix C GNU Free Documentation License
 *****************************************
@@ -2351,7 +2358,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docInpZZ1.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
+File: docwMThyO.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2514,7 +2521,7 @@ Index
                                                                (line 10)
 * use-package-expand-minimally:          Troubleshooting Options.
                                                                (line  6)
-* use-package-hook-name-suffix:          Hooks.                (line 65)
+* use-package-hook-name-suffix:          Hooks.                (line 72)
 * use-package-report:                    Gathering Statistics. (line 19)
 * use-package-reset-statistics:          Gathering Statistics. (line 24)
 * use-package-vc-prefer-newest:          Install package.      (line 53)
@@ -2554,34 +2561,34 @@ Node: Binding to a keymap35076
 Node: Binding to repeat-maps36112
 Node: Displaying keybindings39325
 Node: Hooks39887
-Node: Modes and interpreters42651
-Node: Magic handlers44220
-Node: User options45186
-Node: Faces47057
-Node: Hiding minor modes48077
-Ref: Hiding minor modes-Footnote-148798
-Node: Diminish48859
-Ref: Diminish-Footnote-149818
-Node: Delight49883
-Ref: Delight-Footnote-151747
-Node: Installing packages51811
-Node: Install package52570
-Node: Pinning packages55005
-Ref: Pinning packages-Footnote-156703
-Node: Other package managers56783
-Node: Byte-compiling57649
-Node: Troubleshooting59667
-Node: Troubleshooting Options61016
-Node: Gathering Statistics62570
-Node: Disabling a package64134
-Node: Keyword extensions64845
-Node: use-package-ensure-system-package65331
-Ref: use-package-ensure-system-package-Footnote-168324
-Ref: use-package-ensure-system-package-Footnote-268649
-Node: Creating an extension68780
-Node: History72211
-Node: GNU Free Documentation License72882
-Node: Index98232
+Node: Modes and interpreters42853
+Node: Magic handlers44422
+Node: User options45388
+Node: Faces47259
+Node: Hiding minor modes48279
+Ref: Hiding minor modes-Footnote-149000
+Node: Diminish49061
+Ref: Diminish-Footnote-150020
+Node: Delight50085
+Ref: Delight-Footnote-151949
+Node: Installing packages52013
+Node: Install package52772
+Node: Pinning packages55207
+Ref: Pinning packages-Footnote-156905
+Node: Other package managers56985
+Node: Byte-compiling57851
+Node: Troubleshooting59869
+Node: Troubleshooting Options61218
+Node: Gathering Statistics62772
+Node: Disabling a package64336
+Node: Keyword extensions65047
+Node: use-package-ensure-system-package65533
+Ref: use-package-ensure-system-package-Footnote-168526
+Ref: use-package-ensure-system-package-Footnote-268851
+Node: Creating an extension68982
+Node: History72413
+Node: GNU Free Documentation License73084
+Node: Index98434
 
 End Tag Table
 
