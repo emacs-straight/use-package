@@ -1,27 +1,27 @@
-This is docHvPrEU.info, produced by makeinfo version 6.8 from
+This is docDgxRrD.info, produced by makeinfo version 7.1.1 from
 use-package.texi.
 
 This manual is for use-package 2.4.5 from GNU ELPA.
 
-   Copyright © 2022–2025 Free Software Foundation, Inc.
+   Copyright © 2022-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, with the Front-Cover Texts
-     being “A GNU Manual”, and with the Back-Cover Texts as in (a)
+     being "A GNU Manual", and with the Back-Cover Texts as in (a)
      below.  A copy of the license is included in the section entitled
-     “GNU Free Documentation License”.
+     "GNU Free Documentation License".
 
-     (a) The FSF’s Back-Cover Text is: “You have the freedom to copy and
-     modify this GNU manual.”
+     (a) The FSF's Back-Cover Text is: "You have the freedom to copy and
+     modify this GNU manual."
 INFO-DIR-SECTION Emacs misc features
 START-INFO-DIR-ENTRY
 * use-package: (use-package). Declarative package configuration for Emacs.
 END-INFO-DIR-ENTRY
 
 
-File: docHvPrEU.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
+File: docDgxRrD.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
 
 use-package User Manual
 ***********************
@@ -34,24 +34,24 @@ faces, setting up autoloading, and more.  It also helps you keep Emacs
 startup fast, even when you use many (even hundreds) of packages.
 
    Note that use-package is not a package manager.  While it provides
-convenient integration with Emacs’s built-in package manager, its
+convenient integration with Emacs's built-in package manager, its
 primary purpose is to help with configuring and loading packages, not
 with downloading, upgrading, or installing them.
 
    This manual is for use-package 2.4.5 from GNU ELPA.
 
-   Copyright © 2022–2025 Free Software Foundation, Inc.
+   Copyright © 2022-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, with the Front-Cover Texts
-     being “A GNU Manual”, and with the Back-Cover Texts as in (a)
+     being "A GNU Manual", and with the Back-Cover Texts as in (a)
      below.  A copy of the license is included in the section entitled
-     “GNU Free Documentation License”.
+     "GNU Free Documentation License".
 
-     (a) The FSF’s Back-Cover Text is: “You have the freedom to copy and
-     modify this GNU manual.”
+     (a) The FSF's Back-Cover Text is: "You have the freedom to copy and
+     modify this GNU manual."
 
 * Menu:
 
@@ -61,7 +61,7 @@ with downloading, upgrading, or installing them.
 * Configuring Packages::        Package configuration keywords.
 * Installing packages::         Ensuring packages are available.
 * Byte-compiling::              Byte-compiling your init file.
-* Troubleshooting::             What to do when there’s trouble.
+* Troubleshooting::             What to do when there's trouble.
 
 Appendices
 * Keyword extensions::          Adding new use-package keywords.
@@ -72,7 +72,7 @@ Index
 * Index::
 
 
-File: docHvPrEU.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
+File: docDgxRrD.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Basic Concepts
 ****************
@@ -107,7 +107,7 @@ Customization::).  On the contrary, it is designed to work together with
 it, for things that Customize cannot do.
 
 
-File: docHvPrEU.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
+File: docDgxRrD.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
 
 2 Getting Started
 *****************
@@ -150,7 +150,7 @@ together:
 most cases, this is not necessary or desirable, as that will slow down
 Emacs startup.  Instead, you should try to set things up so that
 packages are only loaded when they are actually needed (this is known as
-“autoloading”).  If you have installed a package from GNU ELPA that
+"autoloading").  If you have installed a package from GNU ELPA that
 provides its own autoloads, it is often enough to say:
 
      (use-package foo
@@ -186,7 +186,7 @@ that as a starting point.
    That should be enough to get you started!
 
 
-File: docHvPrEU.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
+File: docDgxRrD.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
 
 3 Loading Packages
 ******************
@@ -213,11 +213,11 @@ Emacs start.  *Note Installing packages::, for details.
 * Conditional loading::         Loading packages conditionally.
 * Loading sequentially::        Loading packages in sequence.
 * The emacs package::    Customizing built-in variables.
-* Load dependencies::           Don’t load without dependencies.
+* Load dependencies::           Don't load without dependencies.
 * Manual installation::         Loading manually installed packages.
 
 
-File: docHvPrEU.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
 
 3.1 How and when use-package loads packages
 ===========================================
@@ -236,14 +236,14 @@ automatically each time Emacs is started.
 If the library ‘foo’ is not available in your ‘load-path’, the
 declaration logs a warning to the ‘*Messages*’ buffer.
 
-   Note that a “package” is different from an Emacs Lisp “library”.  The
+   Note that a "package" is different from an Emacs Lisp "library".  The
 above declaration tells use-package to load the _library_ ‘foo.el’,
 which in the overwhelming majority of cases also resides in a _package_
 named ‘foo’.  But the package ‘foo’ might also contain a library named
 ‘foo-extra.el’.  If that library is not loaded automatically, you will
 need a separate ‘use-package’ declaration to make sure that it is loaded
-when needed.  This manual will often use the terms “package” and
-“library” interchangeably, as this distinction does not usually matter,
+when needed.  This manual will often use the terms "package" and
+"library" interchangeably, as this distinction does not usually matter,
 but you should keep it in mind for the cases when it does.
 
    The details of how and when you should load a package might differ
@@ -256,7 +256,7 @@ documentation for details.
 Byte-compiling::.
 
 
-File: docHvPrEU.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
 
 3.2 Deferring package loading
 =============================
@@ -265,7 +265,7 @@ In the examples we have seen so far, use-package loads packages every
 time you start Emacs, even if that package is never used.  That will
 make starting Emacs slower.  use-package therefore allows setting things
 up in such a way that packages are only loaded when some of the
-package’s commands is first used (either with ‘M-x’ or via some key
+package's commands is first used (either with ‘M-x’ or via some key
 binding).  This is based on autoloading, a full description of which is
 outside the scope of this manual.  *Note (elisp)Autoload::, for the full
 story.
@@ -299,7 +299,7 @@ Defer loading until idle for N seconds
 --------------------------------------
 
 You can also give a numeric argument N to ‘:defer’ to specify that a
-package should be loaded (if it hasn’t already) after Emacs has been
+package should be loaded (if it hasn't already) after Emacs has been
 idle for N seconds.  For example, use the following to make use-package
 load ‘foo’ after 30 seconds of idle time:
 
@@ -310,11 +310,11 @@ When to use ‘:defer’
 --------------------
 
 When using autoloading keywords, there is no need to also use ‘:defer’.
-It doesn’t hurt to add it in this case, perhaps for extra clarity, but
+It doesn't hurt to add it in this case, perhaps for extra clarity, but
 it is redundant.
 
    You should use ‘:defer’ to force deferred loading, in cases when
-use-package isn’t creating any autoloads for you.  For example, you
+use-package isn't creating any autoloads for you.  For example, you
 might know that some other package will already do something to cause
 your package to load at the appropriate time.  This is usually the case
 when you install a package using ‘package-install’, as packages
@@ -330,7 +330,7 @@ always specified.  This can be overridden for individual declarations
 using either ‘:defer nil’ or ‘:demand t’ (*note Forcing loading::).
 
 
-File: docHvPrEU.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
 
 3.3 Forcing package to load immediately
 =======================================
@@ -346,7 +346,7 @@ be redundant.
 will take precedence.
 
 
-File: docHvPrEU.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
 
 3.4 Loading packages conditionally
 ==================================
@@ -414,7 +414,7 @@ itself.  For example:
          :ensure t))
 
 
-File: docHvPrEU.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
 
 3.5 Loading packages in sequence
 ================================
@@ -474,7 +474,7 @@ possible that your package will never be loaded if you do not add
 ‘:demand t’ to those declarations.
 
 
-File: docHvPrEU.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
+File: docDgxRrD.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
 
 3.6 Customizing built-in variables
 ==================================
@@ -501,10 +501,10 @@ anything.
    ---------- Footnotes ----------
 
    (1) In other words, they are either preloaded in Emacs or defined in
-Emacs’s C sources.
+Emacs's C sources.
 
 
-File: docHvPrEU.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
 
 3.7 Prevent loading if dependencies are missing
 ===============================================
@@ -512,7 +512,7 @@ File: docHvPrEU.info,  Node: Load dependencies,  Next: Manual installation,  Pre
 While the ‘:after’ keyword delays loading until the dependencies are
 loaded, the somewhat simpler ‘:requires’ keyword _never_ loads the
 package if the dependencies are not available when the ‘use-package’
-declaration is evaluated.  In this context, “available” means that ‘foo’
+declaration is evaluated.  In this context, "available" means that ‘foo’
 is available if ‘(featurep 'foo)’ evaluates to a non-‘nil’ value.  For
 example:
 
@@ -533,12 +533,12 @@ This is the same as:
 use ‘:if’ and the appropriate Lisp expression.
 
 
-File: docHvPrEU.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
+File: docDgxRrD.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
 
 3.8 Manually installed package
 ==============================
 
-When installing packages manually, without Emacs’s built-in package
+When installing packages manually, without Emacs's built-in package
 manager (‘package.el’), it will obviously not help you set up autoloads
 or add it to your ‘load-path’.  You must do it yourself.  However,
 use-package makes this more convenient.
@@ -549,7 +549,7 @@ use-package makes this more convenient.
 * Manual autoloads::            Setting up autoloads manually.
 
 
-File: docHvPrEU.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
+File: docDgxRrD.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
 
 3.8.1 Setting a custom ‘load-path’
 ----------------------------------
@@ -587,7 +587,7 @@ For example:
        :commands R)
 
 
-File: docHvPrEU.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
+File: docDgxRrD.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
 
 3.8.2 Setting up autoloads manually
 -----------------------------------
@@ -608,7 +608,7 @@ is used to autoload non-interactive functions.  Here is an example:
        :autoload org-crypt-use-before-save-magic)
 
 
-File: docHvPrEU.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
+File: docDgxRrD.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
 
 4 Configuring Packages
 **********************
@@ -628,7 +628,7 @@ that help you configure packages.
 * Hiding minor modes::          Tidying up the mode line.
 
 
-File: docHvPrEU.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
 
 4.1 Using Lisp code for configuring packages
 ============================================
@@ -649,7 +649,7 @@ evaluated.
 * Best practices::              When to use ‘:config’, ‘:init’, and ‘:preface’.
 
 
-File: docHvPrEU.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
+File: docDgxRrD.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
 
 4.1.1 ‘:preface’ is evaluated first
 -----------------------------------
@@ -670,20 +670,20 @@ Therefore, you should avoid having any side-effects in your ‘:preface’
 forms, and restrict them to symbol declarations and definitions.
 
 
-File: docHvPrEU.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
+File: docDgxRrD.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
 
 4.1.2 ‘:init’ is evaluated before loading package
 -------------------------------------------------
 
 The ‘:init’ section is evaluated just before the package is loaded.
-Note that the ‘:init’ form is run unconditionally – even if the package
+Note that the ‘:init’ form is run unconditionally - even if the package
 happens to not exist on your system.  You must therefore remember to
 restrict ‘:init’ code to what would succeed either way; put the rest in
 the ‘:config’ section.  ‘:init’ also always happens before package load,
 whether ‘:config’ has been deferred or not.
 
 
-File: docHvPrEU.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
+File: docDgxRrD.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
 
 4.1.3 ‘:config’ is evaluated after loading package
 --------------------------------------------------
@@ -699,7 +699,7 @@ section.  That way, deferred loading can help your Emacs start as
 quickly as possible.
 
 
-File: docHvPrEU.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
+File: docDgxRrD.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
 
 4.1.4 When to use ‘:preface’, ‘:config’ and ‘:init’?
 ----------------------------------------------------
@@ -740,7 +740,7 @@ is therefore to use ‘:hook’ (*note Hooks::), which also implies
 startup time will not suffer one bit.
 
 
-File: docHvPrEU.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
 
 4.2 Key bindings
 ================
@@ -760,7 +760,7 @@ various autoloads.  With use-package, you can simplify this using the
 * Displaying keybindings::      Displaying personal key bindings.
 
 
-File: docHvPrEU.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
+File: docDgxRrD.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
 
 4.2.1 Global keybindings
 ------------------------
@@ -800,7 +800,7 @@ This binds the three key sequences to the corresponding commands.
 Using special keys
 ------------------
 
-Inside key strings, special keys like ‘TAB’ or ‘F1’–‘F12’ have to be
+Inside key strings, special keys like ‘TAB’ or ‘F1’-‘F12’ have to be
 written inside angle brackets, e.g., ‘"C-<up>"’.  Standalone special
 keys (and some combinations) can be written in square brackets,
 e.g. ‘[tab]’ instead of ‘"<tab>"’.
@@ -855,7 +855,7 @@ above like so:
 usually the best, as it will save some typing.
 
 
-File: docHvPrEU.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
+File: docDgxRrD.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
 
 4.2.2 Key bindings in local keymaps
 -----------------------------------
@@ -871,7 +871,7 @@ keymap to bind to:
 
 The effect of this is to wait until ‘helm’ has loaded, and then to bind
 the key sequence ‘C-c h’ to ‘helm-execute-persistent-action’ within
-Helm’s local keymap, ‘helm-command-map’.
+Helm's local keymap, ‘helm-command-map’.
 
    Multiple uses of ‘:map’ may be specified.  Any binding occurring
 before the first use of ‘:map’ are applied to the global keymap:
@@ -887,7 +887,7 @@ before the first use of ‘:map’ are applied to the global keymap:
               ("M-n" . term-send-down)))
 
 
-File: docHvPrEU.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
+File: docDgxRrD.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
 
 4.2.3 Binding to keymaps
 ------------------------
@@ -917,7 +917,7 @@ B"’ for package ‘foo’.
 
    Alternatively, to handle this case, ‘use-package’ offers a special,
 limited variant of ‘:bind’ called ‘:bind-keymap’.  The only difference
-is that the “commands” bound to by ‘:bind-keymap’ must be keymaps
+is that the "commands" bound to by ‘:bind-keymap’ must be keymaps
 defined in the package, rather than interactive functions.  This is
 handled behind the scenes by generating custom code that loads the
 package containing the keymap, and then re-executes your keypress after
@@ -929,7 +929,7 @@ the first load, to reinterpret that keypress as a prefix key.
        :bind-keymap ("C-c p" . foo-command-map))
 
 
-File: docHvPrEU.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
+File: docDgxRrD.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
 
 4.2.4 Binding to repeat-maps
 ----------------------------
@@ -1013,7 +1013,7 @@ but not initiate the repeat map themselves.  Example:
         ("y" . yank)))
 
 
-File: docHvPrEU.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
+File: docDgxRrD.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
 
 4.2.5 Displaying personal keybindings
 -------------------------------------
@@ -1023,11 +1023,11 @@ library to set up keybindings.  It keeps track of all keybindings you
 make, so that you can display them separately from the default
 keybindings.
 
-   Use ‘M-x describe-personal-keybindings’ to see all keybindings you’ve
+   Use ‘M-x describe-personal-keybindings’ to see all keybindings you've
 set using either the ‘:bind’ keyword or the ‘bind-keys’ macro.
 
 
-File: docHvPrEU.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
 
 4.3 Hooks
 =========
@@ -1109,7 +1109,7 @@ for that module, if not already defined as functions), and so ‘:defer t’
 is also implied by ‘:hook’.
 
 
-File: docHvPrEU.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
 
 4.4 Modes and interpreters
 ==========================
@@ -1124,7 +1124,7 @@ cells, or a string or regexp.
 configuration, exactly as it is in Emacs out-of-the-box.  That mode is
 enabled automatically when a file whose name matches the regexp
 ‘"\\.rb\\'"’ (a file with the ‘.rb’ extension), or when the first line
-of the file (known as the “shebang”) matches the string ‘"ruby"’:
+of the file (known as the "shebang") matches the string ‘"ruby"’:
 
      (use-package ruby-mode
        :mode "\\.rb\\'"
@@ -1149,7 +1149,7 @@ regexps:
        :interpreter ("fooa" "foob"))
 
 
-File: docHvPrEU.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
 
 4.5 Magic handlers
 ==================
@@ -1174,7 +1174,7 @@ loading of ‘pdf-tools’, and runs ‘pdf-view-mode’ if the beginning of a
 buffer matches the string ‘"%PDF"’.
 
 
-File: docHvPrEU.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
 
 4.6 User options
 ================
@@ -1213,12 +1213,12 @@ We therefore recommend against byte-compiling files that use
 ‘use-package’ with ‘:custom’ settings.
 
 
-File: docHvPrEU.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
 
 4.7 Faces
 =========
 
-The ‘:custom-face’ keyword allows customization of package’s faces.
+The ‘:custom-face’ keyword allows customization of package's faces.
 Example:
 
      (use-package eruby-mode
@@ -1245,7 +1245,7 @@ Customizations::).  Using both systems to configure the same face can
 lead to confusing results.
 
 
-File: docHvPrEU.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
+File: docDgxRrD.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
 
 4.8 Hiding minor modes with diminish and delight
 ================================================
@@ -1253,7 +1253,7 @@ File: docHvPrEU.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring 
 ‘use-package’ supports the ‘diminish’ and ‘delight’ packages, both of
 which make it possible to remove or change minor mode strings in your
 mode-line.  Which one to use is up to you, but you should normally only
-use one or the other – never both.(1)  To use either of them, you must
+use one or the other - never both.(1)  To use either of them, you must
 first install the corresponding package from GNU ELPA.
 
 * Menu:
@@ -1266,7 +1266,7 @@ first install the corresponding package from GNU ELPA.
    (1) When in doubt, you might as well use ‘diminish’.
 
 
-File: docHvPrEU.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
+File: docDgxRrD.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
 
 4.8.1 Diminish
 --------------
@@ -1279,7 +1279,7 @@ file.
 
      (use-package diminish :ensure t)
 
-The optional ‘:ensure t’ makes sure the package is installed if it isn’t
+The optional ‘:ensure t’ makes sure the package is installed if it isn't
 already (*note Installing packages::).
 
    The ‘:diminish’ keyword takes as its argument either a minor mode
@@ -1298,7 +1298,7 @@ the package name with ‘-mode’ appended at the end:
    (1) The ‘diminish’ package is installable from GNU ELPA.
 
 
-File: docHvPrEU.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
+File: docDgxRrD.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
 
 4.8.2 Delight
 -------------
@@ -1311,7 +1311,7 @@ file.
 
      (use-package delight :ensure t)
 
-The optional ‘:ensure t’ makes sure the package is installed if it isn’t
+The optional ‘:ensure t’ makes sure the package is installed if it isn't
 already (*note Installing packages::).
 
    The ‘:delight’ keyword takes as its argument a minor mode symbol, a
@@ -1327,7 +1327,7 @@ mode in the ‘foo’ package:
      (use-package foo
        :delight)
 
-   If the mode name doesn’t match the package name with ‘-mode’
+   If the mode name doesn't match the package name with ‘-mode’
 appended, provide a symbol instead.  For example, the following hides
 ‘auto-revert-mode’ from the mode line:
 
@@ -1355,7 +1355,7 @@ example, to replace ‘foo-mode’ with the value of the current buffer:
    (1) The ‘delight’ package is installable from GNU ELPA.
 
 
-File: docHvPrEU.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
+File: docDgxRrD.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
 
 5 Installing packages automatically
 ***********************************
@@ -1375,7 +1375,7 @@ useful if you use your init file on more than one system.
 * Other package managers::
 
 
-File: docHvPrEU.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
+File: docDgxRrD.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
 
 5.1 Installing package
 ======================
@@ -1413,8 +1413,8 @@ archive.
 (emacs)Fetching Package Sources::, except that a name need not
 explicitly be given: it is inferred from the declaration.  The accepted
 property list is augmented by a ‘:rev’ keyword, which has the same shape
-as the ‘REV’ argument to ‘package-vc-install’.  Notably – even when not
-specified – ‘:rev’ defaults to checking out the last release of the
+as the ‘REV’ argument to ‘package-vc-install’.  Notably - even when not
+specified - ‘:rev’ defaults to checking out the last release of the
 package.  You can use ‘:rev :newest’ to check out the latest commit.
 Note that currently, you cannot upgrade built-in packages using ‘:vc’.
 
@@ -1424,24 +1424,14 @@ Note that currently, you cannot upgrade built-in packages using ‘:vc’.
        :vc (:url "https://git.savannah.nongnu.org/git/bbdb.git"
             :rev :newest))
 
-   would try – by invoking ‘package-vc-install’ – to install the latest
+   would try - by invoking ‘package-vc-install’ - to install the latest
 commit of the package ‘foo’ from the specified remote.
 
    Alternatively, the ‘use-package-vc-prefer-newest’ user option exists
 to always prefer the latest commit.
 
-   The ‘:vc’ keyword can also be used for local packages, by combining
-it with ‘:load-path’ (*note Load path::):
-
-     ;; Use a local copy of BBDB instead of the one from GNU ELPA.
-     (use-package bbdb
-       :vc t
-       :load-path "/path/to/bbdb/dir/")
-
-   The above dispatches to ‘package-vc-install-from-checkout’.
-
 
-File: docHvPrEU.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
+File: docDgxRrD.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
 
 5.2 Pinning packages using ‘:pin’
 =================================
@@ -1488,7 +1478,7 @@ special ‘manual’ archive).
 24.4.
 
 
-File: docHvPrEU.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
+File: docDgxRrD.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
 
 5.3 Non-standard package managers
 =================================
@@ -1507,7 +1497,7 @@ you are using.  If you run into any bugs, it is often best to report
 them directly to the developers of that package manager.
 
 
-File: docHvPrEU.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
+File: docDgxRrD.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
 
 6 Byte-compiling your init file
 *******************************
@@ -1559,7 +1549,7 @@ want to use ‘use-package’ for is to add a configuration to the
        (message "Evaluate this immediately after loading `foo'"))
 
 
-File: docHvPrEU.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
+File: docDgxRrD.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
 
 7 Troubleshooting
 *****************
@@ -1594,7 +1584,7 @@ use-package.
 * Disabling a package::
 
 
-File: docHvPrEU.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
+File: docDgxRrD.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
 
 7.1 Options that help when troubleshooting
 ==========================================
@@ -1632,7 +1622,7 @@ I'm always here after the package is loaded
 oops
 
 
-File: docHvPrEU.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
+File: docDgxRrD.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
 
 7.2 Gathering Statistics
 ========================
@@ -1643,9 +1633,9 @@ see a message to indicate this loading activity in the ‘*Messages*’
 buffer.  The same will happen for configuration, or ‘:config’ blocks,
 that take longer than 0.1 seconds to execute.
 
-   If you’d like to see a summary how many packages you’ve loaded, what
-stage of initialization they’ve reached, and how much aggregate time
-they’ve spent (roughly), you can customize the user option
+   If you'd like to see a summary how many packages you've loaded, what
+stage of initialization they've reached, and how much aggregate time
+they've spent (roughly), you can customize the user option
 ‘use-package-compute-statistics’ to a non-‘nil’ value.  Then reload your
 packages, normally by restarting Emacs, to make sure that use-package
 can gather statistics for all your packages.
@@ -1663,7 +1653,7 @@ directly in your init file, and not with ‘customize’, you must do this
 after loading ‘use-package’, but before any ‘use-package’ forms.
 
 
-File: docHvPrEU.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
+File: docDgxRrD.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
 
 7.3 Disabling a package
 =======================
@@ -1673,8 +1663,8 @@ customizations.  It is equivalent to commenting out or deleting the
 definition.
 
    You could use this, for example, to temporarily disable a package
-that you’re having difficulties with, or to avoid loading a package that
-you’re not currently using.
+that you're having difficulties with, or to avoid loading a package that
+you're not currently using.
 
    This example disables the ‘foo’ package:
 
@@ -1686,7 +1676,7 @@ declarations from the output entirely, in order to make Emacs startup
 faster.
 
 
-File: docHvPrEU.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
+File: docDgxRrD.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
 
 Appendix A Keyword extensions
 *****************************
@@ -1704,7 +1694,7 @@ optionally enabled.
 * Creating an extension::
 
 
-File: docHvPrEU.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
+File: docDgxRrD.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
 
 A.1 :use-package-ensure-system-package
 ======================================
@@ -1718,7 +1708,7 @@ declarations.(1)
 
      (use-package use-package-ensure-system-package)
 
-   Now you can use the ‘:ensure-system-package’ keyword.  Here’s an
+   Now you can use the ‘:ensure-system-package’ keyword.  Here's an
 example usage:
 
      (use-package foo
@@ -1752,7 +1742,7 @@ Emacs could not locate the executable ‘foocmd’.(2)
 
    ‘:ensure-system-package’ can also take a cons where the ‘cdr’ is a
 string that will get called by ‘(async-shell-command)’ to install if it
-isn’t found.  This does not depend on any external package.
+isn't found.  This does not depend on any external package.
 
      (use-package tern
        :ensure-system-package (tern . "npm i -g tern"))
@@ -1797,7 +1787,7 @@ you could try the ‘exec-path-from-shell’
 which is what ‘system-packages’ uses internally.
 
 
-File: docHvPrEU.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
+File: docDgxRrD.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
 
 A.2 How to create an extension keyword
 ======================================
@@ -1877,7 +1867,7 @@ This section describes how to create a new keyword.
      immediately after the ‘(use-package ...)’ expression.
 
 
-File: docHvPrEU.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
+File: docDgxRrD.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
 
 Appendix B History and acknowledgments
 **************************************
@@ -1894,7 +1884,7 @@ but we thank them all for their contributions.
 rewrite of the old use-package manual and ‘README’.
 
 
-File: docHvPrEU.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
+File: docDgxRrD.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
 
 Appendix C GNU Free Documentation License
 *****************************************
@@ -1917,7 +1907,7 @@ Appendix C GNU Free Documentation License
      author and publisher a way to get credit for their work, while not
      being considered responsible for modifications made by others.
 
-     This License is a kind of “copyleft”, which means that derivative
+     This License is a kind of "copyleft", which means that derivative
      works of the document must themselves be free in the same sense.
      It complements the GNU General Public License, which is a copyleft
      license designed for free software.
@@ -1938,18 +1928,18 @@ Appendix C GNU Free Documentation License
      be distributed under the terms of this License.  Such a notice
      grants a world-wide, royalty-free license, unlimited in duration,
      to use that work under the conditions stated herein.  The
-     “Document”, below, refers to any such manual or work.  Any member
-     of the public is a licensee, and is addressed as “you”.  You accept
+     "Document", below, refers to any such manual or work.  Any member
+     of the public is a licensee, and is addressed as "you".  You accept
      the license if you copy, modify or distribute the work in a way
      requiring permission under copyright law.
 
-     A “Modified Version” of the Document means any work containing the
+     A "Modified Version" of the Document means any work containing the
      Document or a portion of it, either copied verbatim, or with
      modifications and/or translated into another language.
 
-     A “Secondary Section” is a named appendix or a front-matter section
+     A "Secondary Section" is a named appendix or a front-matter section
      of the Document that deals exclusively with the relationship of the
-     publishers or authors of the Document to the Document’s overall
+     publishers or authors of the Document to the Document's overall
      subject (or to related matters) and contains nothing that could
      fall directly within that overall subject.  (Thus, if the Document
      is in part a textbook of mathematics, a Secondary Section may not
@@ -1958,7 +1948,7 @@ Appendix C GNU Free Documentation License
      of legal, commercial, philosophical, ethical or political position
      regarding them.
 
-     The “Invariant Sections” are certain Secondary Sections whose
+     The "Invariant Sections" are certain Secondary Sections whose
      titles are designated, as being those of Invariant Sections, in the
      notice that says that the Document is released under this License.
      If a section does not fit the above definition of Secondary then it
@@ -1966,13 +1956,13 @@ Appendix C GNU Free Documentation License
      contain zero Invariant Sections.  If the Document does not identify
      any Invariant Sections then there are none.
 
-     The “Cover Texts” are certain short passages of text that are
+     The "Cover Texts" are certain short passages of text that are
      listed, as Front-Cover Texts or Back-Cover Texts, in the notice
      that says that the Document is released under this License.  A
      Front-Cover Text may be at most 5 words, and a Back-Cover Text may
      be at most 25 words.
 
-     A “Transparent” copy of the Document means a machine-readable copy,
+     A "Transparent" copy of the Document means a machine-readable copy,
      represented in a format whose specification is available to the
      general public, that is suitable for revising the document
      straightforwardly with generic text editors or (for images composed
@@ -1984,7 +1974,7 @@ Appendix C GNU Free Documentation License
      been arranged to thwart or discourage subsequent modification by
      readers is not Transparent.  An image format is not Transparent if
      used for any substantial amount of text.  A copy that is not
-     “Transparent” is called “Opaque”.
+     "Transparent" is called "Opaque".
 
      Examples of suitable formats for Transparent copies include plain
      ASCII without markup, Texinfo input format, LaTeX input format,
@@ -1997,23 +1987,23 @@ Appendix C GNU Free Documentation License
      the machine-generated HTML, PostScript or PDF produced by some word
      processors for output purposes only.
 
-     The “Title Page” means, for a printed book, the title page itself,
+     The "Title Page" means, for a printed book, the title page itself,
      plus such following pages as are needed to hold, legibly, the
      material this License requires to appear in the title page.  For
-     works in formats which do not have any title page as such, “Title
-     Page” means the text near the most prominent appearance of the
-     work’s title, preceding the beginning of the body of the text.
+     works in formats which do not have any title page as such, "Title
+     Page" means the text near the most prominent appearance of the
+     work's title, preceding the beginning of the body of the text.
 
-     The “publisher” means any person or entity that distributes copies
+     The "publisher" means any person or entity that distributes copies
      of the Document to the public.
 
-     A section “Entitled XYZ” means a named subunit of the Document
+     A section "Entitled XYZ" means a named subunit of the Document
      whose title either is precisely XYZ or contains XYZ in parentheses
      following text that translates XYZ in another language.  (Here XYZ
      stands for a specific section name mentioned below, such as
-     “Acknowledgements”, “Dedications”, “Endorsements”, or “History”.)
-     To “Preserve the Title” of such a section when you modify the
-     Document means that it remains a section “Entitled XYZ” according
+     "Acknowledgements", "Dedications", "Endorsements", or "History".)
+     To "Preserve the Title" of such a section when you modify the
+     Document means that it remains a section "Entitled XYZ" according
      to this definition.
 
      The Document may include Warranty Disclaimers next to the notice
@@ -2043,7 +2033,7 @@ Appendix C GNU Free Documentation License
 
      If you publish printed copies (or copies in media that commonly
      have printed covers) of the Document, numbering more than 100, and
-     the Document’s license notice requires Cover Texts, you must
+     the Document's license notice requires Cover Texts, you must
      enclose the copies in covers that carry, clearly and legibly, all
      these Cover Texts: Front-Cover Texts on the front cover, and
      Back-Cover Texts on the back cover.  Both covers must also clearly
@@ -2115,15 +2105,15 @@ Appendix C GNU Free Documentation License
           the Addendum below.
 
        G. Preserve in that license notice the full lists of Invariant
-          Sections and required Cover Texts given in the Document’s
+          Sections and required Cover Texts given in the Document's
           license notice.
 
        H. Include an unaltered copy of this License.
 
-       I. Preserve the section Entitled “History”, Preserve its Title,
+       I. Preserve the section Entitled "History", Preserve its Title,
           and add to it an item stating at least the title, year, new
           authors, and publisher of the Modified Version as given on the
-          Title Page.  If there is no section Entitled “History” in the
+          Title Page.  If there is no section Entitled "History" in the
           Document, create one stating the title, year, authors, and
           publisher of the Document as given on its Title Page, then add
           an item describing the Modified Version as stated in the
@@ -2133,12 +2123,12 @@ Appendix C GNU Free Documentation License
           for public access to a Transparent copy of the Document, and
           likewise the network locations given in the Document for
           previous versions it was based on.  These may be placed in the
-          “History” section.  You may omit a network location for a work
+          "History" section.  You may omit a network location for a work
           that was published at least four years before the Document
           itself, or if the original publisher of the version it refers
           to gives permission.
 
-       K. For any section Entitled “Acknowledgements” or “Dedications”,
+       K. For any section Entitled "Acknowledgements" or "Dedications",
           Preserve the Title of the section, and preserve in the section
           all the substance and tone of each of the contributor
           acknowledgements and/or dedications given therein.
@@ -2147,11 +2137,11 @@ Appendix C GNU Free Documentation License
           in their text and in their titles.  Section numbers or the
           equivalent are not considered part of the section titles.
 
-       M. Delete any section Entitled “Endorsements”.  Such a section
+       M. Delete any section Entitled "Endorsements".  Such a section
           may not be included in the Modified Version.
 
        N. Do not retitle any existing section to be Entitled
-          “Endorsements” or to conflict in title with any Invariant
+          "Endorsements" or to conflict in title with any Invariant
           Section.
 
        O. Preserve any Warranty Disclaimers.
@@ -2160,15 +2150,15 @@ Appendix C GNU Free Documentation License
      appendices that qualify as Secondary Sections and contain no
      material copied from the Document, you may at your option designate
      some or all of these sections as invariant.  To do this, add their
-     titles to the list of Invariant Sections in the Modified Version’s
+     titles to the list of Invariant Sections in the Modified Version's
      license notice.  These titles must be distinct from any other
      section titles.
 
-     You may add a section Entitled “Endorsements”, provided it contains
+     You may add a section Entitled "Endorsements", provided it contains
      nothing but endorsements of your Modified Version by various
-     parties—for example, statements of peer review or that the text has
-     been approved by an organization as the authoritative definition of
-     a standard.
+     parties--for example, statements of peer review or that the text
+     has been approved by an organization as the authoritative
+     definition of a standard.
 
      You may add a passage of up to five words as a Front-Cover Text,
      and a passage of up to 25 words as a Back-Cover Text, to the end of
@@ -2206,10 +2196,10 @@ Appendix C GNU Free Documentation License
      combined work.
 
      In the combination, you must combine any sections Entitled
-     “History” in the various original documents, forming one section
-     Entitled “History”; likewise combine any sections Entitled
-     “Acknowledgements”, and any sections Entitled “Dedications”.  You
-     must delete all sections Entitled “Endorsements.”
+     "History" in the various original documents, forming one section
+     Entitled "History"; likewise combine any sections Entitled
+     "Acknowledgements", and any sections Entitled "Dedications".  You
+     must delete all sections Entitled "Endorsements."
 
   6. COLLECTIONS OF DOCUMENTS
 
@@ -2230,16 +2220,16 @@ Appendix C GNU Free Documentation License
 
      A compilation of the Document or its derivatives with other
      separate and independent documents or works, in or on a volume of a
-     storage or distribution medium, is called an “aggregate” if the
+     storage or distribution medium, is called an "aggregate" if the
      copyright resulting from the compilation is not used to limit the
-     legal rights of the compilation’s users beyond what the individual
+     legal rights of the compilation's users beyond what the individual
      works permit.  When the Document is included in an aggregate, this
      License does not apply to the other works in the aggregate which
      are not themselves derivative works of the Document.
 
      If the Cover Text requirement of section 3 is applicable to these
      copies of the Document, then if the Document is less than one half
-     of the entire aggregate, the Document’s Cover Texts may be placed
+     of the entire aggregate, the Document's Cover Texts may be placed
      on covers that bracket the Document within the aggregate, or the
      electronic equivalent of covers if the Document is in electronic
      form.  Otherwise they must appear on printed covers that bracket
@@ -2261,8 +2251,8 @@ Appendix C GNU Free Documentation License
      this License or a notice or disclaimer, the original version will
      prevail.
 
-     If a section in the Document is Entitled “Acknowledgements”,
-     “Dedications”, or “History”, the requirement (section 4) to
+     If a section in the Document is Entitled "Acknowledgements",
+     "Dedications", or "History", the requirement (section 4) to
      Preserve its Title (section 1) will typically require changing the
      actual title.
 
@@ -2303,7 +2293,7 @@ Appendix C GNU Free Documentation License
 
      Each version of the License is given a distinguishing version
      number.  If the Document specifies that a particular numbered
-     version of this License “or any later version” applies to it, you
+     version of this License "or any later version" applies to it, you
      have the option of following the terms and conditions either of
      that specified version or of any later version that has been
      published (not as a draft) by the Free Software Foundation.  If the
@@ -2311,29 +2301,29 @@ Appendix C GNU Free Documentation License
      choose any version ever published (not as a draft) by the Free
      Software Foundation.  If the Document specifies that a proxy can
      decide which future versions of this License can be used, that
-     proxy’s public statement of acceptance of a version permanently
+     proxy's public statement of acceptance of a version permanently
      authorizes you to choose that version for the Document.
 
   11. RELICENSING
 
-     “Massive Multiauthor Collaboration Site” (or “MMC Site”) means any
+     "Massive Multiauthor Collaboration Site" (or "MMC Site") means any
      World Wide Web server that publishes copyrightable works and also
      provides prominent facilities for anybody to edit those works.  A
      public wiki that anybody can edit is an example of such a server.
-     A “Massive Multiauthor Collaboration” (or “MMC”) contained in the
+     A "Massive Multiauthor Collaboration" (or "MMC") contained in the
      site means any set of copyrightable works thus published on the MMC
      site.
 
-     “CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0
+     "CC-BY-SA" means the Creative Commons Attribution-Share Alike 3.0
      license published by Creative Commons Corporation, a not-for-profit
      corporation with a principal place of business in San Francisco,
      California, as well as future copyleft versions of that license
      published by that same organization.
 
-     “Incorporate” means to publish or republish a Document, in whole or
+     "Incorporate" means to publish or republish a Document, in whole or
      in part, as part of another Document.
 
-     An MMC is “eligible for relicensing” if it is licensed under this
+     An MMC is "eligible for relicensing" if it is licensed under this
      License, and if all works that were first published under this
      License somewhere other than this MMC, and subsequently
      incorporated in whole or in part into the MMC, (1) had no cover
@@ -2360,7 +2350,7 @@ notices just after the title page:
        Free Documentation License''.
 
    If you have Invariant Sections, Front-Cover Texts and Back-Cover
-Texts, replace the “with...Texts.” line with this:
+Texts, replace the "with...Texts." line with this:
 
          with the Invariant Sections being LIST THEIR TITLES, with
          the Front-Cover Texts being LIST, and with the Back-Cover Texts
@@ -2376,7 +2366,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docHvPrEU.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
+File: docDgxRrD.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
@@ -2389,18 +2379,18 @@ Index
 * :any, (with :after):                   Loading sequentially. (line 35)
 * :autoload:                             Manual autoloads.     (line 10)
 * :bind:                                 Global keybindings.   (line  6)
+* :bind-keymap:                          Binding to a keymap.  (line 29)
 * :bind, and function keys:              Global keybindings.   (line 41)
 * :bind, and remapping of commands:      Global keybindings.   (line 57)
 * :bind, internals:                      Global keybindings.   (line 69)
-* :bind-keymap:                          Binding to a keymap.  (line 29)
 * :catch:                                Troubleshooting Options.
                                                                (line 11)
 * :commands:                             Manual autoloads.     (line 10)
 * :config:                               Config keyword.       (line  6)
-* :continue, inside :repeat-map and :bind: Binding to repeat-maps.
-                                                               (line 45)
 * :continue-only, inside :repeat-map and :bind: Binding to repeat-maps.
                                                                (line 62)
+* :continue, inside :repeat-map and :bind: Binding to repeat-maps.
+                                                               (line 45)
 * :custom:                               User options.         (line  6)
 * :custom-face:                          Faces.                (line  6)
 * :defer:                                Deferring loading.    (line 26)
@@ -2550,63 +2540,63 @@ Index
 
 
 Tag Table:
-Node: Top918
-Node: Basic Concepts3099
-Node: Getting Started4616
-Node: Loading Packages7664
-Node: Loading basics9035
-Ref: Loading basics-Footnote-110674
-Node: Deferring loading10758
-Node: Forcing loading14011
-Node: Conditional loading14694
-Node: Loading sequentially16951
-Node: The emacs package19639
-Ref: The emacs package-Footnote-120541
-Node: Load dependencies20635
-Node: Manual installation21618
-Node: Load path22177
-Node: Manual autoloads23652
-Node: Configuring Packages24476
-Node: Lisp Configuration25232
-Node: Preface keyword26094
-Node: Init keyword26984
-Node: Config keyword27631
-Node: Best practices28354
-Node: Key bindings29911
-Node: Global keybindings30708
-Node: Binding in keymaps33871
-Node: Binding to a keymap35076
-Node: Binding to repeat-maps36661
-Node: Displaying keybindings39874
-Node: Hooks40436
-Node: Modes and interpreters43402
-Node: Magic handlers44971
-Node: User options45937
-Node: Faces47808
-Node: Hiding minor modes48828
-Ref: Hiding minor modes-Footnote-149549
-Node: Diminish49610
-Ref: Diminish-Footnote-150569
-Node: Delight50634
-Ref: Delight-Footnote-152498
-Node: Installing packages52562
-Node: Install package53321
-Node: Pinning packages55756
-Ref: Pinning packages-Footnote-157454
-Node: Other package managers57534
-Node: Byte-compiling58400
-Node: Troubleshooting60418
-Node: Troubleshooting Options61767
-Node: Gathering Statistics63321
-Node: Disabling a package64885
-Node: Keyword extensions65596
-Node: use-package-ensure-system-package66082
-Ref: use-package-ensure-system-package-Footnote-169075
-Ref: use-package-ensure-system-package-Footnote-269400
-Node: Creating an extension69531
-Node: History72962
-Node: GNU Free Documentation License73633
-Node: Index98983
+Node: Top904
+Node: Basic Concepts3065
+Node: Getting Started4582
+Node: Loading Packages7626
+Node: Loading basics8995
+Ref: Loading basics-Footnote-110618
+Node: Deferring loading10702
+Node: Forcing loading13947
+Node: Conditional loading14630
+Node: Loading sequentially16887
+Node: The emacs package19575
+Ref: The emacs package-Footnote-120477
+Node: Load dependencies20569
+Node: Manual installation21548
+Node: Load path22105
+Node: Manual autoloads23580
+Node: Configuring Packages24404
+Node: Lisp Configuration25160
+Node: Preface keyword26022
+Node: Init keyword26912
+Node: Config keyword27557
+Node: Best practices28280
+Node: Key bindings29837
+Node: Global keybindings30634
+Node: Binding in keymaps33795
+Node: Binding to a keymap34998
+Node: Binding to repeat-maps36579
+Node: Displaying keybindings39792
+Node: Hooks40352
+Node: Modes and interpreters43318
+Node: Magic handlers44883
+Node: User options45849
+Node: Faces47720
+Node: Hiding minor modes48738
+Ref: Hiding minor modes-Footnote-149457
+Node: Diminish49518
+Ref: Diminish-Footnote-150475
+Node: Delight50540
+Ref: Delight-Footnote-152400
+Node: Installing packages52464
+Node: Install package53223
+Node: Pinning packages55316
+Ref: Pinning packages-Footnote-157014
+Node: Other package managers57094
+Node: Byte-compiling57960
+Node: Troubleshooting59978
+Node: Troubleshooting Options61327
+Node: Gathering Statistics62881
+Node: Disabling a package64437
+Node: Keyword extensions65144
+Node: use-package-ensure-system-package65630
+Ref: use-package-ensure-system-package-Footnote-168619
+Ref: use-package-ensure-system-package-Footnote-268944
+Node: Creating an extension69075
+Node: History72506
+Node: GNU Free Documentation License73177
+Node: Index98326
 
 End Tag Table
 
