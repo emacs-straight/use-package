@@ -1,9 +1,9 @@
-This is docDgxRrD.info, produced by makeinfo version 7.1.1 from
+This is docGuKB6z.info, produced by makeinfo version 7.1.1 from
 use-package.texi.
 
 This manual is for use-package 2.4.5 from GNU ELPA.
 
-   Copyright © 2022-2025 Free Software Foundation, Inc.
+   Copyright © 2022-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -21,7 +21,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docDgxRrD.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
+File: docGuKB6z.info,  Node: Top,  Next: Basic Concepts,  Up: (dir)
 
 use-package User Manual
 ***********************
@@ -40,7 +40,7 @@ with downloading, upgrading, or installing them.
 
    This manual is for use-package 2.4.5 from GNU ELPA.
 
-   Copyright © 2022-2025 Free Software Foundation, Inc.
+   Copyright © 2022-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -72,7 +72,7 @@ Index
 * Index::
 
 
-File: docDgxRrD.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
+File: docGuKB6z.info,  Node: Basic Concepts,  Next: Getting Started,  Prev: Top,  Up: Top
 
 1 Basic Concepts
 ****************
@@ -107,7 +107,7 @@ Customization::).  On the contrary, it is designed to work together with
 it, for things that Customize cannot do.
 
 
-File: docDgxRrD.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
+File: docGuKB6z.info,  Node: Getting Started,  Next: Loading Packages,  Prev: Basic Concepts,  Up: Top
 
 2 Getting Started
 *****************
@@ -186,7 +186,7 @@ that as a starting point.
    That should be enough to get you started!
 
 
-File: docDgxRrD.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
+File: docGuKB6z.info,  Node: Loading Packages,  Next: Configuring Packages,  Prev: Getting Started,  Up: Top
 
 3 Loading Packages
 ******************
@@ -217,7 +217,7 @@ Emacs start.  *Note Installing packages::, for details.
 * Manual installation::         Loading manually installed packages.
 
 
-File: docDgxRrD.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Loading basics,  Next: Deferring loading,  Up: Loading Packages
 
 3.1 How and when use-package loads packages
 ===========================================
@@ -256,7 +256,7 @@ documentation for details.
 Byte-compiling::.
 
 
-File: docDgxRrD.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Deferring loading,  Next: Forcing loading,  Prev: Loading basics,  Up: Loading Packages
 
 3.2 Deferring package loading
 =============================
@@ -330,7 +330,7 @@ always specified.  This can be overridden for individual declarations
 using either ‘:defer nil’ or ‘:demand t’ (*note Forcing loading::).
 
 
-File: docDgxRrD.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Forcing loading,  Next: Conditional loading,  Prev: Deferring loading,  Up: Loading Packages
 
 3.3 Forcing package to load immediately
 =======================================
@@ -346,7 +346,7 @@ be redundant.
 will take precedence.
 
 
-File: docDgxRrD.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Conditional loading,  Next: Loading sequentially,  Prev: Forcing loading,  Up: Loading Packages
 
 3.4 Loading packages conditionally
 ==================================
@@ -414,7 +414,7 @@ itself.  For example:
          :ensure t))
 
 
-File: docDgxRrD.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Loading sequentially,  Next: The emacs package,  Prev: Conditional loading,  Up: Loading Packages
 
 3.5 Loading packages in sequence
 ================================
@@ -474,7 +474,7 @@ possible that your package will never be loaded if you do not add
 ‘:demand t’ to those declarations.
 
 
-File: docDgxRrD.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
+File: docGuKB6z.info,  Node: The emacs package,  Next: Load dependencies,  Prev: Loading sequentially,  Up: Loading Packages
 
 3.6 Customizing built-in variables
 ==================================
@@ -504,7 +504,7 @@ anything.
 Emacs's C sources.
 
 
-File: docDgxRrD.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Load dependencies,  Next: Manual installation,  Prev: The emacs package,  Up: Loading Packages
 
 3.7 Prevent loading if dependencies are missing
 ===============================================
@@ -533,7 +533,7 @@ This is the same as:
 use ‘:if’ and the appropriate Lisp expression.
 
 
-File: docDgxRrD.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
+File: docGuKB6z.info,  Node: Manual installation,  Prev: Load dependencies,  Up: Loading Packages
 
 3.8 Manually installed package
 ==============================
@@ -549,7 +549,7 @@ use-package makes this more convenient.
 * Manual autoloads::            Setting up autoloads manually.
 
 
-File: docDgxRrD.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
+File: docGuKB6z.info,  Node: Load path,  Next: Manual autoloads,  Up: Manual installation
 
 3.8.1 Setting a custom ‘load-path’
 ----------------------------------
@@ -587,7 +587,7 @@ For example:
        :commands R)
 
 
-File: docDgxRrD.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
+File: docGuKB6z.info,  Node: Manual autoloads,  Prev: Load path,  Up: Manual installation
 
 3.8.2 Setting up autoloads manually
 -----------------------------------
@@ -608,7 +608,7 @@ is used to autoload non-interactive functions.  Here is an example:
        :autoload org-crypt-use-before-save-magic)
 
 
-File: docDgxRrD.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
+File: docGuKB6z.info,  Node: Configuring Packages,  Next: Installing packages,  Prev: Loading Packages,  Up: Top
 
 4 Configuring Packages
 **********************
@@ -628,7 +628,7 @@ that help you configure packages.
 * Hiding minor modes::          Tidying up the mode line.
 
 
-File: docDgxRrD.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Lisp Configuration,  Next: Key bindings,  Up: Configuring Packages
 
 4.1 Using Lisp code for configuring packages
 ============================================
@@ -649,7 +649,7 @@ evaluated.
 * Best practices::              When to use ‘:config’, ‘:init’, and ‘:preface’.
 
 
-File: docDgxRrD.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
+File: docGuKB6z.info,  Node: Preface keyword,  Next: Init keyword,  Up: Lisp Configuration
 
 4.1.1 ‘:preface’ is evaluated first
 -----------------------------------
@@ -670,7 +670,7 @@ Therefore, you should avoid having any side-effects in your ‘:preface’
 forms, and restrict them to symbol declarations and definitions.
 
 
-File: docDgxRrD.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
+File: docGuKB6z.info,  Node: Init keyword,  Next: Config keyword,  Prev: Preface keyword,  Up: Lisp Configuration
 
 4.1.2 ‘:init’ is evaluated before loading package
 -------------------------------------------------
@@ -683,7 +683,7 @@ the ‘:config’ section.  ‘:init’ also always happens before package load,
 whether ‘:config’ has been deferred or not.
 
 
-File: docDgxRrD.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
+File: docGuKB6z.info,  Node: Config keyword,  Next: Best practices,  Prev: Init keyword,  Up: Lisp Configuration
 
 4.1.3 ‘:config’ is evaluated after loading package
 --------------------------------------------------
@@ -699,7 +699,7 @@ section.  That way, deferred loading can help your Emacs start as
 quickly as possible.
 
 
-File: docDgxRrD.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
+File: docGuKB6z.info,  Node: Best practices,  Prev: Config keyword,  Up: Lisp Configuration
 
 4.1.4 When to use ‘:preface’, ‘:config’ and ‘:init’?
 ----------------------------------------------------
@@ -740,7 +740,7 @@ is therefore to use ‘:hook’ (*note Hooks::), which also implies
 startup time will not suffer one bit.
 
 
-File: docDgxRrD.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Key bindings,  Next: Hooks,  Prev: Lisp Configuration,  Up: Configuring Packages
 
 4.2 Key bindings
 ================
@@ -760,7 +760,7 @@ various autoloads.  With use-package, you can simplify this using the
 * Displaying keybindings::      Displaying personal key bindings.
 
 
-File: docDgxRrD.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
+File: docGuKB6z.info,  Node: Global keybindings,  Next: Binding in keymaps,  Up: Key bindings
 
 4.2.1 Global keybindings
 ------------------------
@@ -855,7 +855,7 @@ above like so:
 usually the best, as it will save some typing.
 
 
-File: docDgxRrD.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
+File: docGuKB6z.info,  Node: Binding in keymaps,  Next: Binding to a keymap,  Prev: Global keybindings,  Up: Key bindings
 
 4.2.2 Key bindings in local keymaps
 -----------------------------------
@@ -887,7 +887,7 @@ before the first use of ‘:map’ are applied to the global keymap:
               ("M-n" . term-send-down)))
 
 
-File: docDgxRrD.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
+File: docGuKB6z.info,  Node: Binding to a keymap,  Next: Binding to repeat-maps,  Prev: Binding in keymaps,  Up: Key bindings
 
 4.2.3 Binding to keymaps
 ------------------------
@@ -929,7 +929,7 @@ the first load, to reinterpret that keypress as a prefix key.
        :bind-keymap ("C-c p" . foo-command-map))
 
 
-File: docDgxRrD.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
+File: docGuKB6z.info,  Node: Binding to repeat-maps,  Next: Displaying keybindings,  Prev: Binding to a keymap,  Up: Key bindings
 
 4.2.4 Binding to repeat-maps
 ----------------------------
@@ -1013,7 +1013,7 @@ but not initiate the repeat map themselves.  Example:
         ("y" . yank)))
 
 
-File: docDgxRrD.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
+File: docGuKB6z.info,  Node: Displaying keybindings,  Prev: Binding to repeat-maps,  Up: Key bindings
 
 4.2.5 Displaying personal keybindings
 -------------------------------------
@@ -1027,7 +1027,7 @@ keybindings.
 set using either the ‘:bind’ keyword or the ‘bind-keys’ macro.
 
 
-File: docDgxRrD.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Hooks,  Next: Modes and interpreters,  Prev: Key bindings,  Up: Configuring Packages
 
 4.3 Hooks
 =========
@@ -1109,7 +1109,7 @@ for that module, if not already defined as functions), and so ‘:defer t’
 is also implied by ‘:hook’.
 
 
-File: docDgxRrD.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Modes and interpreters,  Next: Magic handlers,  Prev: Hooks,  Up: Configuring Packages
 
 4.4 Modes and interpreters
 ==========================
@@ -1149,7 +1149,7 @@ regexps:
        :interpreter ("fooa" "foob"))
 
 
-File: docDgxRrD.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Magic handlers,  Next: User options,  Prev: Modes and interpreters,  Up: Configuring Packages
 
 4.5 Magic handlers
 ==================
@@ -1174,7 +1174,7 @@ loading of ‘pdf-tools’, and runs ‘pdf-view-mode’ if the beginning of a
 buffer matches the string ‘"%PDF"’.
 
 
-File: docDgxRrD.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: User options,  Next: Faces,  Prev: Magic handlers,  Up: Configuring Packages
 
 4.6 User options
 ================
@@ -1213,7 +1213,7 @@ We therefore recommend against byte-compiling files that use
 ‘use-package’ with ‘:custom’ settings.
 
 
-File: docDgxRrD.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Faces,  Next: Hiding minor modes,  Prev: User options,  Up: Configuring Packages
 
 4.7 Faces
 =========
@@ -1245,7 +1245,7 @@ Customizations::).  Using both systems to configure the same face can
 lead to confusing results.
 
 
-File: docDgxRrD.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
+File: docGuKB6z.info,  Node: Hiding minor modes,  Prev: Faces,  Up: Configuring Packages
 
 4.8 Hiding minor modes with diminish and delight
 ================================================
@@ -1266,7 +1266,7 @@ first install the corresponding package from GNU ELPA.
    (1) When in doubt, you might as well use ‘diminish’.
 
 
-File: docDgxRrD.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
+File: docGuKB6z.info,  Node: Diminish,  Next: Delight,  Up: Hiding minor modes
 
 4.8.1 Diminish
 --------------
@@ -1298,7 +1298,7 @@ the package name with ‘-mode’ appended at the end:
    (1) The ‘diminish’ package is installable from GNU ELPA.
 
 
-File: docDgxRrD.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
+File: docGuKB6z.info,  Node: Delight,  Prev: Diminish,  Up: Hiding minor modes
 
 4.8.2 Delight
 -------------
@@ -1355,7 +1355,7 @@ example, to replace ‘foo-mode’ with the value of the current buffer:
    (1) The ‘delight’ package is installable from GNU ELPA.
 
 
-File: docDgxRrD.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
+File: docGuKB6z.info,  Node: Installing packages,  Next: Byte-compiling,  Prev: Configuring Packages,  Up: Top
 
 5 Installing packages automatically
 ***********************************
@@ -1375,7 +1375,7 @@ useful if you use your init file on more than one system.
 * Other package managers::
 
 
-File: docDgxRrD.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
+File: docGuKB6z.info,  Node: Install package,  Next: Pinning packages,  Up: Installing packages
 
 5.1 Installing package
 ======================
@@ -1431,7 +1431,7 @@ commit of the package ‘foo’ from the specified remote.
 to always prefer the latest commit.
 
 
-File: docDgxRrD.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
+File: docGuKB6z.info,  Node: Pinning packages,  Next: Other package managers,  Prev: Install package,  Up: Installing packages
 
 5.2 Pinning packages using ‘:pin’
 =================================
@@ -1478,7 +1478,7 @@ special ‘manual’ archive).
 24.4.
 
 
-File: docDgxRrD.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
+File: docGuKB6z.info,  Node: Other package managers,  Prev: Pinning packages,  Up: Installing packages
 
 5.3 Non-standard package managers
 =================================
@@ -1497,7 +1497,7 @@ you are using.  If you run into any bugs, it is often best to report
 them directly to the developers of that package manager.
 
 
-File: docDgxRrD.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
+File: docGuKB6z.info,  Node: Byte-compiling,  Next: Troubleshooting,  Prev: Installing packages,  Up: Top
 
 6 Byte-compiling your init file
 *******************************
@@ -1549,7 +1549,7 @@ want to use ‘use-package’ for is to add a configuration to the
        (message "Evaluate this immediately after loading `foo'"))
 
 
-File: docDgxRrD.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
+File: docGuKB6z.info,  Node: Troubleshooting,  Next: Keyword extensions,  Prev: Byte-compiling,  Up: Top
 
 7 Troubleshooting
 *****************
@@ -1584,7 +1584,7 @@ use-package.
 * Disabling a package::
 
 
-File: docDgxRrD.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
+File: docGuKB6z.info,  Node: Troubleshooting Options,  Next: Gathering Statistics,  Up: Troubleshooting
 
 7.1 Options that help when troubleshooting
 ==========================================
@@ -1622,7 +1622,7 @@ I'm always here after the package is loaded
 oops
 
 
-File: docDgxRrD.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
+File: docGuKB6z.info,  Node: Gathering Statistics,  Next: Disabling a package,  Prev: Troubleshooting Options,  Up: Troubleshooting
 
 7.2 Gathering Statistics
 ========================
@@ -1653,7 +1653,7 @@ directly in your init file, and not with ‘customize’, you must do this
 after loading ‘use-package’, but before any ‘use-package’ forms.
 
 
-File: docDgxRrD.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
+File: docGuKB6z.info,  Node: Disabling a package,  Prev: Gathering Statistics,  Up: Troubleshooting
 
 7.3 Disabling a package
 =======================
@@ -1676,7 +1676,7 @@ declarations from the output entirely, in order to make Emacs startup
 faster.
 
 
-File: docDgxRrD.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
+File: docGuKB6z.info,  Node: Keyword extensions,  Next: History,  Prev: Troubleshooting,  Up: Top
 
 Appendix A Keyword extensions
 *****************************
@@ -1694,7 +1694,7 @@ optionally enabled.
 * Creating an extension::
 
 
-File: docDgxRrD.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
+File: docGuKB6z.info,  Node: use-package-ensure-system-package,  Next: Creating an extension,  Up: Keyword extensions
 
 A.1 :use-package-ensure-system-package
 ======================================
@@ -1787,7 +1787,7 @@ you could try the ‘exec-path-from-shell’
 which is what ‘system-packages’ uses internally.
 
 
-File: docDgxRrD.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
+File: docGuKB6z.info,  Node: Creating an extension,  Prev: use-package-ensure-system-package,  Up: Keyword extensions
 
 A.2 How to create an extension keyword
 ======================================
@@ -1867,7 +1867,7 @@ This section describes how to create a new keyword.
      immediately after the ‘(use-package ...)’ expression.
 
 
-File: docDgxRrD.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
+File: docGuKB6z.info,  Node: History,  Next: GNU Free Documentation License,  Prev: Keyword extensions,  Up: Top
 
 Appendix B History and acknowledgments
 **************************************
@@ -1884,7 +1884,7 @@ but we thank them all for their contributions.
 rewrite of the old use-package manual and ‘README’.
 
 
-File: docDgxRrD.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
+File: docGuKB6z.info,  Node: GNU Free Documentation License,  Next: Index,  Prev: History,  Up: Top
 
 Appendix C GNU Free Documentation License
 *****************************************
@@ -2366,7 +2366,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docDgxRrD.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
+File: docGuKB6z.info,  Node: Index,  Prev: GNU Free Documentation License,  Up: Top
 
 Index
 *****
