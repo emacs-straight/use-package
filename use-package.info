@@ -1421,11 +1421,17 @@ Note that currently, you cannot upgrade built-in packages using ‘:vc’.
    For example,
 
      (use-package bbdb
+       :vc "https://git.savannah.nongnu.org/git/bbdb.git")
+
+   will check out the latest release commit using ‘package-vc-install’,
+while
+
+     (use-package bbdb
        :vc (:url "https://git.savannah.nongnu.org/git/bbdb.git"
             :rev :newest))
 
-   would try - by invoking ‘package-vc-install’ - to install the latest
-commit of the package ‘foo’ from the specified remote.
+   would try to install the latest commit of the package ‘foo’ from the
+specified remote.
 
    Alternatively, the ‘use-package-vc-prefer-newest’ user option exists
 to always prefer the latest commit.
@@ -2532,7 +2538,7 @@ Index
 * use-package-hook-name-suffix:          Hooks.                (line 72)
 * use-package-report:                    Gathering Statistics. (line 19)
 * use-package-reset-statistics:          Gathering Statistics. (line 24)
-* use-package-vc-prefer-newest:          Install package.      (line 53)
+* use-package-vc-prefer-newest:          Install package.      (line 59)
 * use-package-verbose:                   Gathering Statistics. (line  6)
 * user options, setting:                 User options.         (line  6)
 * variable customizations:               User options.         (line  6)
@@ -2580,22 +2586,22 @@ Node: Delight50606
 Ref: Delight-Footnote-152468
 Node: Installing packages52532
 Node: Install package53293
-Node: Pinning packages55388
-Ref: Pinning packages-Footnote-157088
-Node: Other package managers57168
-Node: Byte-compiling58036
-Node: Troubleshooting60056
-Node: Troubleshooting Options61407
-Node: Gathering Statistics62963
-Node: Disabling a package64521
-Node: Keyword extensions65230
-Node: use-package-ensure-system-package65718
-Ref: use-package-ensure-system-package-Footnote-168709
-Ref: use-package-ensure-system-package-Footnote-269034
-Node: Creating an extension69165
-Node: History72598
-Node: GNU Free Documentation License73271
-Node: Index98422
+Node: Pinning packages55513
+Ref: Pinning packages-Footnote-157213
+Node: Other package managers57293
+Node: Byte-compiling58161
+Node: Troubleshooting60181
+Node: Troubleshooting Options61532
+Node: Gathering Statistics63088
+Node: Disabling a package64646
+Node: Keyword extensions65355
+Node: use-package-ensure-system-package65843
+Ref: use-package-ensure-system-package-Footnote-168834
+Ref: use-package-ensure-system-package-Footnote-269159
+Node: Creating an extension69290
+Node: History72723
+Node: GNU Free Documentation License73396
+Node: Index98547
 
 End Tag Table
 
